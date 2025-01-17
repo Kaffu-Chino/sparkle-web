@@ -32,6 +32,7 @@ const { t } = useI18n()
 <style lang="scss" scoped>
 .user-info-card {
   border: unset;
+  background-color: transparent;
   .user-avatar {
     width: auto;
     padding: 0 20px;
