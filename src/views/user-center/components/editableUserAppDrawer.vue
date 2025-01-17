@@ -46,7 +46,7 @@
 import type { FormInstance, FormRules } from 'element-plus'
 import { ref, reactive } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { createUserApp, editUserAppByAppId } from '~/api/userApplication'
+import { createUserApp, editUserAppByAppId } from '~/api/userApplicationService'
 import UserAppInfoDrawer from './userAppInfoDrawer.vue'
 
 const userApplicationFormRef = ref<FormInstance>()

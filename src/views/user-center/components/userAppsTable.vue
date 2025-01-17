@@ -113,7 +113,7 @@ import {
   deleteUserAppByAppId,
   listUserApps,
   resetUserAppSecretByAppId
-} from '~/api/userApplication'
+} from '~/api/userApplicationService'
 import EditableUserAppDrawer from './editableUserAppDrawer.vue'
 import UserAppInfoDrawer from './userAppInfoDrawer.vue'
 const { t } = useI18n()
