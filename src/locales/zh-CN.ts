@@ -2,6 +2,7 @@ import homeViewLocales from '~/views/home/locales/zh-CN'
 import notFoundViewLocales from '~/views/not-found/locales/zh-CN'
 import userCenterViewLocales from '~/views/user-center/locales/zh-CN'
 import userLoginViewLocales from '~/views/user-login/locales/zh-CN'
+import banHistoryViewLocales from '~/views/ban-history/locales/zh-CN'
 
 export default {
   'global.create': '创建',
@@ -30,5 +31,6 @@ export default {
   ...homeViewLocales,
   ...notFoundViewLocales,
   ...userCenterViewLocales,
-  ...userLoginViewLocales
+  ...userLoginViewLocales,
+  ...banHistoryViewLocales
 }

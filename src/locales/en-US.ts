@@ -2,6 +2,7 @@ import homeViewLocales from '~/views/home/locales/en-US'
 import notFoundViewLocales from '~/views/not-found/locales/en-US'
 import userCenterViewLocales from '~/views/user-center/locales/en-US'
 import userLoginViewLocales from '~/views/user-login/locales/en-US'
+import banHistoryViewLocales from '~/views/ban-history/locales/en-US'
 
 export default {
   'global.create': 'Create',
@@ -30,5 +31,6 @@ export default {
   ...homeViewLocales,
   ...notFoundViewLocales,
   ...userCenterViewLocales,
-  ...userLoginViewLocales
+  ...userLoginViewLocales,
+  ...banHistoryViewLocales
 }
