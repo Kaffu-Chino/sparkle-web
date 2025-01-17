@@ -37,12 +37,12 @@ const routes = [
     meta: { requiresAuth: false }
   },
   {
-    path: '/banRecords',
+    path: '/banHistory',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    name: 'ban-records',
-    component: () => import('~/views/ban-records/banRecordsView.vue'),
+    name: 'ban-history',
+    component: () => import('~/views/ban-history/banHistoryView.vue'),
     // 登陆验证
     meta: { requiresAuth: true }
   },
