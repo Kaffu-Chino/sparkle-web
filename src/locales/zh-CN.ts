@@ -18,7 +18,7 @@ export default {
   'footer.info.lastBuildTime': '最后构建时间',
 
   'header.router.home': '首页',
-  'header.router.banRecords': '封禁记录',
+  'header.router.banHistory': '封禁历史',
   'header.router.submissionRecords': '提交记录',
   'header.router.featureDiscovery': '特征发现',
   'header.router.tracker': 'Tracker',

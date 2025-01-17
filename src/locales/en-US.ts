@@ -18,7 +18,7 @@ export default {
   'footer.info.lastBuildTime': 'Last Build Time',
 
   'header.router.home': 'Home',
-  'header.router.banRecords': 'Ban Records',
+  'header.router.banHistory': 'Ban History',
   'header.router.submissionRecords': 'Submission Records',
   'header.router.featureDiscovery': 'Feature Discovery',
   'header.router.tracker': 'Tracker',
