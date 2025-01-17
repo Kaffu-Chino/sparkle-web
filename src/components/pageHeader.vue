@@ -62,7 +62,7 @@ import { useLocalePath } from 'vue-i18n-routing'
 import { Sunny as ElconSunny, Moon as ElconMoon } from '@element-plus/icons-vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useUserStore } from '~/stores/userStore'
-import { userLogout } from '~/api/user'
+import { userLogout } from '~/api/userService'
 const { t } = useI18n()
 
 const userStore = useUserStore()

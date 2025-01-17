@@ -1,5 +1,5 @@
 /**
- * User
+ * 用户元数据
  */
 export interface IUser {
   /**

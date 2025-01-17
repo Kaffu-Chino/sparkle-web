@@ -10,6 +10,6 @@ export interface IResponse<T> extends IResponseWithoutData {
   data: T
 }
 
-export interface IResponseWithPage<T> extends IResponseWithoutData {
+export interface IPaginationResponse<T> extends IResponseWithoutData {
   data: IPagination<T>
 }

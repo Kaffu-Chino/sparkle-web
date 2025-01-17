@@ -14,7 +14,7 @@
           >
           <el-descriptions-item :label="t('userCenterView.userInfo.descriptionsItem.registerAt')">{{
             userStore.user?.registerAt
-              ? dayjs(Number(userStore.user?.registerAt)).format('YYYY-MM-DD HH:mm')
+              ? dayjs(Number(userStore.user?.registerAt) * 1000).format('YYYY-MM-DD HH:mm')
               : 'N/A'
           }}</el-descriptions-item>
         </el-descriptions>
@@ -32,6 +32,7 @@ const { t } = useI18n()
 <style lang="scss" scoped>
 .user-info-card {
   border: unset;
+  background-color: transparent;
   .user-avatar {
     width: auto;
     padding: 0 20px;
