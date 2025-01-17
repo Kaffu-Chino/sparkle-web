@@ -1,7 +1,7 @@
 import type { IUser } from './user'
 
 /**
- * UserApplication
+ * 用户应用元数据
  */
 export interface IUserApplication {
   /**
