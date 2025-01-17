@@ -23,10 +23,10 @@
         sortable
         prop="createdAt"
         :label="t('userCenterView.userAppsTable.createdAt')"
-        width="140"
+        width="160"
         :formatter="
           (_row: any, _column: any, cellValue: any) => {
-            return dayjs(cellValue).format('YYYY-MM-DD HH:mm')
+            return dayjs(Number(cellValue) * 1000).format('YYYY-MM-DD HH:mm:ss')
           }
         "
       />

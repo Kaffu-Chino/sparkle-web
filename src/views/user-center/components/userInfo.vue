@@ -14,7 +14,7 @@
           >
           <el-descriptions-item :label="t('userCenterView.userInfo.descriptionsItem.registerAt')">{{
             userStore.user?.registerAt
-              ? dayjs(Number(userStore.user?.registerAt)).format('YYYY-MM-DD HH:mm')
+              ? dayjs(Number(userStore.user?.registerAt) * 1000).format('YYYY-MM-DD HH:mm')
               : 'N/A'
           }}</el-descriptions-item>
         </el-descriptions>
