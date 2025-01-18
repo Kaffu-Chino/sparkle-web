@@ -11,6 +11,10 @@ export interface ITorrent {
    **/
   identifier: string
   /**
+   * 私有种子
+   */
+  privateTorrent: boolean
+  /**
    * 种子大小
    **/
   size: number
