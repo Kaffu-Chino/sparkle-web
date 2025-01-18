@@ -68,43 +68,43 @@ export interface IComplexBanHistoryQueryRequest {
 
   // 流量信息
   /**
-   * 来自 Peer 的流量，不使用查询条件时请勿传递此参数
+   * 从 Peer 下载的数据量，不使用查询条件时请勿传递此参数
    */
   fromPeerTraffic?: number
   /**
-   * 来自 Peer 的流量比较方法，不使用查询条件时请勿传递此参数
+   * 从 Peer 下载的数据量比较方法，不使用查询条件时请勿传递此参数
    */
   fromPeerTrafficCompareMethod?: NumberCompareMethod
   /**
-   * 来自 Peer 的流量速度，不使用查询条件时请勿传递此参数
+   * 从 Peer 下载的速率，不使用查询条件时请勿传递此参数
    */
   fromPeerTrafficSpeed?: number
   /**
-   * 来自 Peer 的流量速度比较方法，不使用查询条件时请勿传递此参数
+   * 从 Peer 下载的速率比较方法，不使用查询条件时请勿传递此参数
    */
   fromPeerTrafficSpeedCompareMethod?: NumberCompareMethod
   /**
-   * 到 Peer 的流量，不使用查询条件时请勿传递此参数
+   * 向 Peer 上传的数据量，不使用查询条件时请勿传递此参数
    */
   toPeerTraffic?: number
   /**
-   * 到 Peer 的流量比较方法，不使用查询条件时请勿传递此参数
+   * 向 Peer 上传的数据量比较方法，不使用查询条件时请勿传递此参数
    */
   toPeerTrafficCompareMethod?: NumberCompareMethod
   /**
-   * 到 Peer 流量的速度，不使用查询条件时请勿传递此参数
+   * 向 Peer 上传的速率，不使用查询条件时请勿传递此参数
    */
   toPeerTrafficSpeed?: number
   /**
-   * 到 Peer 流量的速度比较方法，不使用查询条件时请勿传递此参数
+   * 向 Peer 上传的速率比较方法，不使用查询条件时请勿传递此参数
    */
   toPeerTrafficSpeedCompareMethod?: NumberCompareMethod
   /**
-   * Peer 进度，不使用查询条件时请勿传递此参数
+   * Peer 汇报进度，不使用查询条件时请勿传递此参数
    */
   peerProgress?: number
   /**
-   * Peer 进度比较方法，不使用查询条件时请勿传递此参数
+   * Peer 汇报进度比较方法，不使用查询条件时请勿传递此参数
    */
   peerProgressCompareMethod?: NumberCompareMethod
   /**
