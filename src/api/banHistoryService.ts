@@ -11,11 +11,7 @@ import type { IComplexBanHistoryQueryRequest } from './models/banHistoryRequest'
  * @returns
  **/
 export async function listBanHistory(paginationReq: IPaginationRequest) {
-  return request<IPaginationResponse<IBanHistory[]>>(
-    '/api/banhistory',
-    HttpMethod.GET,
-    paginationReq
-  )
+  return request<IPaginationResponse<IBanHistory>>('/api/banhistory', HttpMethod.GET, paginationReq)
 }
 
 /**
@@ -28,7 +24,7 @@ export async function complexBanHistoryQuery(
   complexBanHistoryQueryReq: IComplexBanHistoryQueryRequest,
   paginationReq: IPaginationRequest
 ) {
-  return request<IPaginationResponse<IBanHistory[]>>('/api/banhistory/query', HttpMethod.POST, {
+  return request<IPaginationResponse<IBanHistory>>('/api/banhistory/query', HttpMethod.POST, {
     ...complexBanHistoryQueryReq,
     ...paginationReq
   })
