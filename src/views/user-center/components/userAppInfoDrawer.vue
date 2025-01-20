@@ -48,7 +48,7 @@ import { Download as ElDownload } from '@element-plus/icons-vue'
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { IUserApplicationVerbose } from '~/api/models/userApplicationVerbose'
-import { exportToCSVFile } from '~/utils/csvTools'
+import { exportToCSVFile } from '~/utils/dataExport'
 const { t } = useI18n()
 
 const showDrawer = ref(false)
