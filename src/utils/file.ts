@@ -1,5 +1,5 @@
 function formatFileSize(bytes: number, decimals = 2) {
-  if (bytes === -1) return 'N/A' // 在没有完成元数据拉取之前，部分下载器会返回 -1 值
+  if (bytes === -1) return 'N/A' // 如果不支持，请使用 -1 值填充
   if (bytes === 0) return '0 Bytes'
 
   const k = 1024
@@ -12,6 +12,7 @@ function formatFileSize(bytes: number, decimals = 2) {
 }
 
 function formatSpeedSize(bytesPerSecond: number, decimals = 2) {
+  if (bytesPerSecond === -1) return 'N/A' // 如果不支持，请使用 -1 值填充
   return formatFileSize(bytesPerSecond, decimals) + '/s'
 }
 

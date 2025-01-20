@@ -21,6 +21,7 @@ export default {
   'banHistoryView.searchForm.formItems.torrentSize': 'torrent Size',
   'banHistoryView.searchForm.sections.trafficInformation': 'Traffic Information',
   'banHistoryView.searchForm.formItems.fromPeerTraffic': 'From Peer Traffic',
+  'banHistoryView.searchForm.formItems.fromPeerTrafficSpeed': 'From Peer Traffic Speed',
   'banHistoryView.searchForm.formItems.toPeerTraffic': 'To Peer Traffic',
   'banHistoryView.searchForm.formItems.toPeerTrafficSpeed': 'To Peer Traffic Speed',
   'banHistoryView.searchForm.formItems.peerProgress': 'Peer Progress',
@@ -38,5 +39,28 @@ export default {
   'banHistoryView.searchForm.formItems.compareMethodSelect.placeholder': 'Compare Method',
 
   'banHistoryView.banHistoryTable.title': 'Ban History',
-  'banHistoryView.banHistoryTable.advancedSearch': 'Advanced Search'
+  'banHistoryView.banHistoryTable.advancedSearch': 'Advanced Search',
+  'banHistoryView.banHistoryTable.columns.peerAddress': 'Peer Address',
+  'banHistoryView.banHistoryTable.columns.peerId': 'Peer ID',
+  'banHistoryView.banHistoryTable.columns.peerId.menuItems.ipAnalysis': 'Analysis this IP',
+  'banHistoryView.banHistoryTable.columns.networkSnapshot': 'Network Snapshot',
+  'banHistoryView.banHistoryTable.columns.networkSnapshot.tooltip.peerProgress':
+    'Peer Progress Report',
+  'banHistoryView.banHistoryTable.columns.torrentInfo': 'Torrent Info',
+  'banHistoryView.banHistoryTable.columns.torrentInfo.columns.types': 'Type',
+  'banHistoryView.banHistoryTable.columns.torrentInfo.columns.types.bt': 'Common',
+  'banHistoryView.banHistoryTable.columns.torrentIdentifier.types.pt': 'Private',
+  'banHistoryView.banHistoryTable.columns.torrentInfo.columns.identifier': 'Identifier Hash',
+  'banHistoryView.banHistoryTable.columns.torrentInfo.columns.torrentSize': 'Szie',
+  'banHistoryView.banHistoryTable.columns.banInfo': 'Ban Info',
+  'banHistoryView.banHistoryTable.columns.banInfo.columns.btnBan': 'BTN Ban',
+  'banHistoryView.banHistoryTable.columns.banInfo.columns.banReason': 'Ban Reason',
+  'banHistoryView.banHistoryTable.columns.expand.moreInfoDescriptions.title':
+    'More Info of This Record',
+  'banHistoryView.banHistoryTable.columns.expand.moreInfoDescriptions.items.peerFlags':
+    'Peer falgs',
+  'banHistoryView.banHistoryTable.columns.expand.moreInfoDescriptions.items.banModule':
+    'Ban Module Name',
+  'banHistoryView.banHistoryTable.columns.expand.moreInfoDescriptions.items.submitterAppId':
+    'Submitter App ID'
 }
