@@ -10,7 +10,7 @@ import IconsResolver from 'unplugin-icons/resolver'
 import path from 'path'
 
 // https://vitejs.dev/config/
-export default ({ mode }:any) => {
+export default ({ mode }: any) => {
   const pathSrc = path.resolve(__dirname, 'src')
   const env = loadEnv(mode, process.cwd())
 
@@ -22,7 +22,8 @@ export default ({ mode }:any) => {
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: `@use "~/styles/element/index.scss" as *;`
+          additionalData: `@use "~/styles/element/index.scss" as *;`,
+          api: 'modern-compiler'
         }
       }
     },
