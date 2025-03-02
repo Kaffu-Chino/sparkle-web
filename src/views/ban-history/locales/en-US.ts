@@ -18,12 +18,12 @@ export default {
   'banHistoryView.searchForm.formItems.peerPort': 'Peer Port',
   'banHistoryView.searchForm.sections.torrentInformation': 'Torrent Information',
   'banHistoryView.searchForm.formItems.torrentIdentifier': 'Torrent Identifier',
-  'banHistoryView.searchForm.formItems.torrentSize': 'torrent Size',
+  'banHistoryView.searchForm.formItems.torrentSize': 'Torrent Size',
   'banHistoryView.searchForm.sections.trafficInformation': 'Traffic Information',
   'banHistoryView.searchForm.formItems.fromPeerTraffic': 'From Peer Traffic',
-  'banHistoryView.searchForm.formItems.fromPeerTrafficSpeed': 'From Peer Traffic Speed',
+  'banHistoryView.searchForm.formItems.fromPeerTrafficSpeed': 'From Peer Speed',
   'banHistoryView.searchForm.formItems.toPeerTraffic': 'To Peer Traffic',
-  'banHistoryView.searchForm.formItems.toPeerTrafficSpeed': 'To Peer Traffic Speed',
+  'banHistoryView.searchForm.formItems.toPeerTrafficSpeed': 'To Peer Speed',
   'banHistoryView.searchForm.formItems.peerProgress': 'Peer Progress',
   'banHistoryView.searchForm.formItems.downloaderProgress': 'Downloader Progress',
   'banHistoryView.searchForm.sections.banInformation': 'Ban Information',
@@ -34,6 +34,8 @@ export default {
   'banHistoryView.searchForm.formItems.btnBan.options.no': 'No',
   'banHistoryView.searchForm.sections.searchSettings': 'Search Settings',
   'banHistoryView.searchForm.formItems.sortBy': 'Sort By',
+  'banHistoryView.searchForm.formItems.sortBy.toooltips.inputTip':
+    'Please click the Enter key after input one',
   'banHistoryView.searchForm.formItems.sortOrder': 'Sort Order',
   'banHistoryView.searchForm.formItems.orConnector': 'Use "OR" Connector',
   'banHistoryView.searchForm.formItems.compareMethodSelect.placeholder': 'Compare Method',
@@ -58,7 +60,7 @@ export default {
   'banHistoryView.banHistoryTable.columns.expand.moreInfoDescriptions.title':
     'More Info of This Record',
   'banHistoryView.banHistoryTable.columns.expand.moreInfoDescriptions.items.peerFlags':
-    'Peer falgs',
+    'Peer Flags',
   'banHistoryView.banHistoryTable.columns.expand.moreInfoDescriptions.items.banModule':
     'Ban Module Name',
   'banHistoryView.banHistoryTable.columns.expand.moreInfoDescriptions.items.submitterAppId':

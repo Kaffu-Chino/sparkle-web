@@ -35,6 +35,21 @@ export default {
   'global.peerFlags.flags.E': 'Peer is using Protocol Encryption (all traffic)',
   'global.peerFlags.flags.e': 'Peer is using Protocol Encryption (handshake)',
 
+  'global.enums.StringCompareMethod.tips.CONTAINS': 'Contains',
+  'global.enums.StringCompareMethod.tips.NOT_CONTAINS': 'Not contains',
+  'global.enums.StringCompareMethod.tips.EQUALS': 'Equals',
+  'global.enums.StringCompareMethod.tips.NOT_EQUALS': 'Not equals',
+  'global.enums.StringCompareMethod.tips.STARTS_WITH': 'Starts with',
+  'global.enums.StringCompareMethod.tips.NOT_STARTS_WITH': 'Not starts with',
+  'global.enums.StringCompareMethod.tips.ENDS_WITH': 'Ends with',
+  'global.enums.StringCompareMethod.tips.NOT_ENDS_WITH': 'Not ends with',
+
+  'global.enums.NumberCompareMethod.tips.LESS_THAN': 'Less than (<)',
+  'global.enums.NumberCompareMethod.tips.LESS_THAN_EQUAL': 'Less than/Equal (≤) ',
+  'global.enums.NumberCompareMethod.tips.GREATER_THAN': 'More than (>)',
+  'global.enums.NumberCompareMethod.tips.GREATER_THAN_EQUAL': 'More than/Equal (≥)',
+  'global.enums.NumberCompareMethod.tips.EQUAL': 'Equal (=)',
+
   'footer.settings': 'Settings',
   'footer.settings.selectLanguage': 'Select Language',
   'footer.info.webuiVersion': 'WebUI Version',

@@ -1,5 +1,5 @@
 <template>
-  <el-card shadow="never">
+  <el-card shadow="never" v-loading="loading">
     <template #header>
       <el-space style="justify-content: space-between; display: flex">
         <el-space>
@@ -20,7 +20,7 @@
       </el-space>
     </template>
     <template #default>
-      <el-table :data="results" style="width: 100%" v-loading="loading">
+      <el-table :data="results" style="width: 100%">
         <template #empty>
           <el-empty description="No Data" />
         </template>
@@ -249,7 +249,7 @@
       <div>
         <el-pagination
           background
-          layout="prev, pager, next, sizes, jumper"
+          layout="prev, pager, next, sizes, jumper, total"
           :page-sizes="[10, 20, 30, 40, 50, 100]"
           :total="total()"
           v-model:current-page="pagination.page"
@@ -277,7 +277,7 @@ import {
   Select as ElSelect,
   SemiSelect as ElSemiSelect
 } from '@element-plus/icons-vue'
-import { onMounted, ref, defineExpose, defineEmits } from 'vue'
+import { onMounted, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { IBanHistory } from '~/api/models/banHistory'
 import type { IPagination } from '~/api/models/pagination'
@@ -290,7 +290,6 @@ import { convertFlagsToDescripMap } from '~/utils/converter'
 const { t } = useI18n()
 
 const showSearchForm = ref<boolean>(false)
-const loading = ref<boolean>(false)
 const pagination = ref<IPaginationRequest>({
   page: 1,
   pageSize: 10
@@ -305,15 +304,22 @@ function total() {
 
 const emit = defineEmits(['toggle:search', 'error'])
 
+const loading = defineModel<Boolean>('loading', {
+  default: false
+})
+const complexBanQuery = defineModel<IComplexBanHistoryQueryRequest | null>('param', {
+  default: null
+})
+
 const toggleSearch = () => {
   showSearchForm.value = !showSearchForm.value
   emit('toggle:search', showSearchForm.value)
 }
 
-const fetchData = async (complexBanQuery?: IComplexBanHistoryQueryRequest) => {
+const fetchData = async () => {
   loading.value = true
-  if (showSearchForm.value && complexBanQuery) {
-    data.value = (await complexBanHistoryQuery(complexBanQuery, pagination.value)).data.data
+  if (showSearchForm.value && complexBanQuery.value) {
+    data.value = (await complexBanHistoryQuery(complexBanQuery.value, pagination.value)).data.data
   } else {
     data.value = (await listBanHistory(pagination.value)).data.data
   }
@@ -328,6 +334,11 @@ const handleSizeChange = () => {
 const handleCurrentChange = () => {
   fetchData()
 }
+
+// 监听complexBanQuery的变化，当complexBanQuery变化时，重新获取数据
+watch(complexBanQuery, () => {
+  fetchData()
+})
 
 defineExpose({
   fetchData

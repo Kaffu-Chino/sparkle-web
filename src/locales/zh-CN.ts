@@ -32,6 +32,21 @@ export default {
   'global.peerFlags.flags.E': '加密的流量',
   'global.peerFlags.flags.e': '加密握手',
 
+  'global.enums.StringCompareMethod.tips.CONTAINS': '包含',
+  'global.enums.StringCompareMethod.tips.NOT_CONTAINS': '不包含',
+  'global.enums.StringCompareMethod.tips.EQUALS': '匹配',
+  'global.enums.StringCompareMethod.tips.NOT_EQUALS': '不匹配',
+  'global.enums.StringCompareMethod.tips.STARTS_WITH': '开头为...',
+  'global.enums.StringCompareMethod.tips.NOT_STARTS_WITH': '开头不为...',
+  'global.enums.StringCompareMethod.tips.ENDS_WITH': '结尾为...',
+  'global.enums.StringCompareMethod.tips.NOT_ENDS_WITH': '结尾不为...',
+
+  'global.enums.NumberCompareMethod.tips.LESS_THAN': '小于（＜）',
+  'global.enums.NumberCompareMethod.tips.LESS_THAN_EQUAL': '小于等于（≤）',
+  'global.enums.NumberCompareMethod.tips.GREATER_THAN': '大于（＞）',
+  'global.enums.NumberCompareMethod.tips.GREATER_THAN_EQUAL': '大于等于（≥）',
+  'global.enums.NumberCompareMethod.tips.EQUAL': '等于（＝）',
+
   'footer.settings': '设置',
   'footer.settings.selectLanguage': '选择语言',
   'footer.info.webuiVersion': 'WebUI 版本',
