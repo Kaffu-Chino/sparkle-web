@@ -151,5 +151,22 @@ export interface IComplexBanHistoryQueryRequest {
    * 排序方式，不使用查询条件时请勿传递此参数
    */
   sortOrder?: string
-  [property: string]: any
+}
+
+/**
+ * 复杂封禁历史查询表单
+ */
+export interface IComplexBanHistoryQueryForm extends IComplexBanHistoryQueryRequest {
+  /**
+   * 时间范围
+   */
+  dateTimeRange: null | Array<Date>
+  /**
+   * peer 汇报进度（%）
+   */
+  peerProgressPercentage?: number
+  /**
+   * 下载器进度（%）
+   */
+  downloaderProgressPercentage?: number
 }

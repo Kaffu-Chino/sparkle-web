@@ -1,6 +1,6 @@
 # sparkle-web
 
-A WebUI of the [Sparkle](https://github.com/PBH-BTN/Sparkle), based on [Element Plus](https://element-plus.org/) and support [i18n(vue-i18n-routing)](https://vue-i18n.intlify.dev/).
+A WebUI of [Sparkle](https://github.com/PBH-BTN/Sparkle), based on [Element Plus](https://element-plus.org/) and support [i18n(vue-i18n-routing)](https://vue-i18n.intlify.dev/).
 
 ## Feature
 
@@ -8,7 +8,7 @@ A WebUI of the [Sparkle](https://github.com/PBH-BTN/Sparkle), based on [Element 
 
 - [x] Manage User Application
 
-- [ ] Ban Records with search
+- [x] Ban History with search
 
 - [ ] Submission Records with search
 
@@ -19,6 +19,10 @@ A WebUI of the [Sparkle](https://github.com/PBH-BTN/Sparkle), based on [Element 
 ## Screenshots
 
 ![home](./assets/home.jpeg)
+
+![banHistory](./assets/banHistory.png)
+
+![userCenter](./assets/userCenter.png)
 
 ## How to contribute
 
@@ -41,6 +45,8 @@ pnpm install
 ```
 
 #### Compile and Hot-Reload for Development
+
+Before compiling the project, make sure to set up the environment variables based on the `env example` file.
 
 ```sh
 pnpm dev

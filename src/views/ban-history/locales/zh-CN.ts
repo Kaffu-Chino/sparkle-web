@@ -34,6 +34,7 @@ export default {
   'banHistoryView.searchForm.formItems.btnBan.options.no': '否',
   'banHistoryView.searchForm.sections.searchSettings': '查询设置',
   'banHistoryView.searchForm.formItems.sortBy': '排序字段',
+  'banHistoryView.searchForm.formItems.sortBy.toooltips.inputTip': '输入一个后请按 Enter 键',
   'banHistoryView.searchForm.formItems.sortOrder': '排序方式',
   'banHistoryView.searchForm.formItems.orConnector': '使用 OR 条件连接查询项',
   'banHistoryView.searchForm.formItems.compareMethodSelect.placeholder': '匹配方式',
