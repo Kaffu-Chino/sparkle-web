@@ -46,6 +46,8 @@ pnpm install
 
 #### Compile and Hot-Reload for Development
 
+Before compiling the project, make sure to set up the environment variables based on the `env example` file.
+
 ```sh
 pnpm dev
 ```
