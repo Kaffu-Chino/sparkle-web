@@ -16,6 +16,9 @@ export default {
   'global.form.submit': 'Submit',
   'global.form.empty': 'Empty',
 
+  'global.messages.copySuccess': 'Copy Success',
+  'global.messages.copyError': 'Copy Error',
+
   'global.peerFlags.flags.P': 'μtp',
   'global.peerFlags.flags.d':
     "Your client wants to download, but peer doesn't want to send (interested and choked)",

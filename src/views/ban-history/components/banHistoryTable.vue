@@ -87,13 +87,16 @@
             <el-popover effect="light" trigger="hover" placement="right" width="auto">
               <template #default>
                 <ul class="hover-menu">
-                  <li class="hover-menu-item">
+                  <li
+                    class="hover-menu-item"
+                    @click="copyContent(`${scope.row.peerIp}:${scope.row.peerPort}`)"
+                  >
                     <el-space>
                       <el-icon class="el-icon--left"> <ElCopyDocument /> </el-icon>
                       {{ t('global.copy') }}
                     </el-space>
                   </li>
-                  <li class="hover-menu-item">
+                  <li class="hover-menu-item" style="cursor: not-allowed" disabled>
                     <el-space>
                       <el-icon class="el-icon--left"> <ElHistogram /> </el-icon>
                       {{ t('banHistoryView.banHistoryTable.columns.peerId.menuItems.ipAnalysis') }}
@@ -277,6 +280,7 @@ import {
   Select as ElSelect,
   SemiSelect as ElSemiSelect
 } from '@element-plus/icons-vue'
+import clipboardCopy from 'clipboard-copy'
 import { onMounted, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import type { IBanHistory } from '~/api/models/banHistory'
@@ -333,6 +337,18 @@ const handleSizeChange = () => {
 
 const handleCurrentChange = () => {
   fetchData()
+}
+
+const copyContent = async (content) => {
+  try {
+    await clipboardCopy(content)
+    ElMessage.success(t('global.messages.copySuccess'))
+  } catch (e) {
+    ElNotification.error({
+      title: t('global.messages.copyError'),
+      message: e
+    })
+  }
 }
 
 // 监听complexBanQuery的变化，当complexBanQuery变化时，重新获取数据
