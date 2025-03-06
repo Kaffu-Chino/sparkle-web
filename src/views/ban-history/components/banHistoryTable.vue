@@ -106,7 +106,7 @@
               </template>
               <template #reference>
                 <el-tag class="ip-display-tag" type="info">
-                  {{ scope.row.peerIp }}:{{ scope.row.peerPort }}
+                  {{ formatHostAddress(scope.row.peerIp, scope.row.peerPort) }}
                 </el-tag>
               </template>
             </el-popover>
@@ -289,6 +289,7 @@ import type { IPaginationRequest } from '~/api/models/paginationRequest'
 import type { IComplexBanHistoryQueryRequest } from '~/api/models/banHistoryRequest'
 import { complexBanHistoryQuery, listBanHistory } from '~/api/banHistoryService'
 import { formatFileSize, formatSpeedSize } from '~/utils/file'
+import { formatHostAddress } from '~/utils/ip'
 import { convertFlagsToDescripMap } from '~/utils/converter'
 
 const { t } = useI18n()
