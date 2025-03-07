@@ -21,8 +21,8 @@
     <el-menu-item index="1" @click="router.push(localePath('/'))">{{
       t('header.router.home')
     }}</el-menu-item>
-    <el-menu-item index="2" @click="router.push(localePath('/banRecords'))">{{
-      t('header.router.banRecords')
+    <el-menu-item index="2" @click="router.push(localePath('/banHistory'))">{{
+      t('header.router.banHistory')
     }}</el-menu-item>
     <el-menu-item index="3" @click="router.push(localePath('/submissionRecords'))">{{
       t('header.router.submissionRecords')
