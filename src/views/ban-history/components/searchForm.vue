@@ -63,7 +63,7 @@
                   value: () => {
                     const end = new Date()
                     const start = new Date()
-                    start.setMonth(start.getDate() - 30)
+                    start.setDate(start.getDate() - 30)
                     return [start, end]
                   }
                 }
