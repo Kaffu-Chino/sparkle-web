@@ -27,8 +27,8 @@
     <el-menu-item index="3" @click="router.push(localePath('/submissionRecords'))">{{
       t('header.router.submissionRecords')
     }}</el-menu-item>
-    <el-menu-item index="4" @click="router.push(localePath('/featureDiscovery'))">{{
-      t('header.router.featureDiscovery')
+    <el-menu-item index="4" @click="router.push(localePath('/clientDiscovery'))">{{
+      t('header.router.clientDiscovery')
     }}</el-menu-item>
     <el-menu-item index="5" @click="router.push(localePath('/tracker'))">{{
       t('header.router.tracker')

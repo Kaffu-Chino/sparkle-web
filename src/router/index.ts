@@ -57,12 +57,12 @@ const routes = [
     meta: { requiresAuth: true }
   },
   {
-    path: '/featureDiscovery',
+    path: '/clientDiscovery',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    name: 'feature-discovery',
-    component: () => import('~/views/feature-discovery/featureDiscoveryView.vue'),
+    name: 'client-discovery',
+    component: () => import('~/views/client-discovery/clientDiscoveryView.vue'),
     // 登陆验证
     meta: { requiresAuth: true }
   },
