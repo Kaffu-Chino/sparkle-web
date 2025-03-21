@@ -4,6 +4,7 @@ import userCenterViewLocales from '~/views/user-center/locales/en-US'
 import userLoginViewLocales from '~/views/user-login/locales/en-US'
 import banHistoryViewLocales from '~/views/ban-history/locales/en-US'
 import clientDiscoveryViewLocales from '~/views/client-discovery/locales/en-US'
+import snapshotViewLocales from '~/views/snapshot/locales/en-US'
 
 export default {
   'global.create': 'Create',
@@ -64,7 +65,7 @@ export default {
 
   'header.router.home': 'Home',
   'header.router.banHistory': 'Ban History',
-  'header.router.submissionRecords': 'Submission Records',
+  'header.router.snapshot': 'Snapshot',
   'header.router.clientDiscovery': 'Client Discovery',
   'header.router.tracker': 'Tracker',
   'header.router.user': 'User',
@@ -77,5 +78,6 @@ export default {
   ...userCenterViewLocales,
   ...userLoginViewLocales,
   ...banHistoryViewLocales,
-  ...clientDiscoveryViewLocales
+  ...clientDiscoveryViewLocales,
+  ...snapshotViewLocales
 }

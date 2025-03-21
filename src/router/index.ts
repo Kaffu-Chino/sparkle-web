@@ -47,12 +47,12 @@ const routes = [
     meta: { requiresAuth: true }
   },
   {
-    path: '/submissionRecords',
+    path: '/snapshot',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    name: 'submission-records',
-    component: () => import('~/views/submission-records/submissionRecordsView.vue'),
+    name: 'snapshot',
+    component: () => import('~/views/snapshot/snapshotView.vue'),
     // 登陆验证
     meta: { requiresAuth: true }
   },
