@@ -10,7 +10,7 @@ A WebUI of [Sparkle](https://github.com/PBH-BTN/Sparkle), based on [Element Plus
 
 - [x] Ban History with search
 
-- [ ] Submission Records with search
+- [x] Snapshot with search
 
 - [x] Client Discovery with search
 
