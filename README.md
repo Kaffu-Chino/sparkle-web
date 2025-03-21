@@ -12,7 +12,7 @@ A WebUI of [Sparkle](https://github.com/PBH-BTN/Sparkle), based on [Element Plus
 
 - [ ] Submission Records with search
 
-- [ ] Feature Discovery with search
+- [x] Client Discovery with search
 
 - [ ] Tracker with search
 

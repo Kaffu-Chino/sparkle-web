@@ -3,6 +3,7 @@ import notFoundViewLocales from '~/views/not-found/locales/en-US'
 import userCenterViewLocales from '~/views/user-center/locales/en-US'
 import userLoginViewLocales from '~/views/user-login/locales/en-US'
 import banHistoryViewLocales from '~/views/ban-history/locales/en-US'
+import clientDiscoveryViewLocales from '~/views/client-discovery/locales/en-US'
 
 export default {
   'global.create': 'Create',
@@ -13,6 +14,9 @@ export default {
   'global.edit': 'Edit',
   'global.refresh': 'Refresh',
   'global.copy': 'Copy',
+
+  'global.value.empty': 'Empty',
+
   'global.form.submit': 'Submit',
   'global.form.empty': 'Empty',
 
@@ -61,7 +65,7 @@ export default {
   'header.router.home': 'Home',
   'header.router.banHistory': 'Ban History',
   'header.router.submissionRecords': 'Submission Records',
-  'header.router.featureDiscovery': 'Feature Discovery',
+  'header.router.clientDiscovery': 'Client Discovery',
   'header.router.tracker': 'Tracker',
   'header.router.user': 'User',
   'header.router.user.userCenter': 'User Center',
@@ -72,5 +76,6 @@ export default {
   ...notFoundViewLocales,
   ...userCenterViewLocales,
   ...userLoginViewLocales,
-  ...banHistoryViewLocales
+  ...banHistoryViewLocales,
+  ...clientDiscoveryViewLocales
 }
