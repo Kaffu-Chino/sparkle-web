@@ -340,14 +340,14 @@ const handleCurrentChange = () => {
   fetchData()
 }
 
-const copyContent = async (content) => {
+const copyContent = async (content: string) => {
   try {
     await clipboardCopy(content)
     ElMessage.success(t('global.messages.copySuccess'))
   } catch (e) {
     ElNotification.error({
       title: t('global.messages.copyError'),
-      message: e
+      message: String(e)
     })
   }
 }
