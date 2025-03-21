@@ -111,7 +111,6 @@ const { t } = useI18n()
 const { width } = useWindowSize()
 
 const responsiveColumn = computed(() => {
-  console.log(width.value)
   if (width.value < 768) return 1
   if (width.value < 1920) return 2
   return 4
@@ -138,6 +137,6 @@ const copyContent = async (content: string) => {
   color: var(--el-color-info);
 }
 :deep(.user-info-popper) {
-  padding: '0px';
+  padding: 0;
 }
 </style>
