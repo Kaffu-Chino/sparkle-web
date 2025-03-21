@@ -3,6 +3,7 @@ import notFoundViewLocales from '~/views/not-found/locales/zh-CN'
 import userCenterViewLocales from '~/views/user-center/locales/zh-CN'
 import userLoginViewLocales from '~/views/user-login/locales/zh-CN'
 import banHistoryViewLocales from '~/views/ban-history/locales/zh-CN'
+import clientDiscoveryViewLocales from '~/views/client-discovery/locales/zh-CN'
 
 export default {
   'global.create': '创建',
@@ -13,6 +14,9 @@ export default {
   'global.edit': '编辑',
   'global.refresh': '刷新',
   'global.copy': '复制',
+
+  'global.value.empty': '空',
+
   'global.form.submit': '提交',
   'global.form.empty': '清空',
 
@@ -58,7 +62,7 @@ export default {
   'header.router.home': '首页',
   'header.router.banHistory': '封禁历史',
   'header.router.submissionRecords': '提交记录',
-  'header.router.featureDiscovery': '特征发现',
+  'header.router.clientDiscovery': '客户端发现',
   'header.router.tracker': 'Tracker',
   'header.router.user': '用户',
   'header.router.user.userCenter': '用户中心',
@@ -69,5 +73,6 @@ export default {
   ...notFoundViewLocales,
   ...userCenterViewLocales,
   ...userLoginViewLocales,
-  ...banHistoryViewLocales
+  ...banHistoryViewLocales,
+  ...clientDiscoveryViewLocales
 }
