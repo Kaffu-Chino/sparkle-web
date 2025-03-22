@@ -96,7 +96,7 @@
 </template>
 
 <script lang="ts" setup>
-import { dayjs, ElNotification } from 'element-plus'
+import { dayjs, ElMessage, ElNotification } from 'element-plus'
 import {
   Refresh as ElRefresh,
   Edit as ElEdit,

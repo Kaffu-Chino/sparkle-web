@@ -99,7 +99,7 @@
 
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n'
-import { dayjs, ElNotification } from 'element-plus'
+import { dayjs, ElMessage, ElNotification } from 'element-plus'
 import { CopyDocument as ElCopyDocument } from '@element-plus/icons-vue'
 import { computed } from 'vue'
 import { useWindowSize } from '@vueuse/core'
