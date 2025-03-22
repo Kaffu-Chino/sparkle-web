@@ -313,9 +313,7 @@ const emit = defineEmits(['toggle:search', 'error'])
 const loading = defineModel<Boolean>('loading', {
   default: false
 })
-const complexBanQuery = defineModel<IComplexBanHistoryQueryRequest | null>('param', {
-  default: null
-})
+const props = defineProps<{ param: IComplexBanHistoryQueryRequest | null }>()
 
 const toggleSearch = () => {
   showSearchForm.value = !showSearchForm.value
@@ -324,12 +322,19 @@ const toggleSearch = () => {
 
 const fetchData = async () => {
   loading.value = true
-  if (showSearchForm.value && complexBanQuery.value) {
-    data.value = (await complexBanHistoryQuery(complexBanQuery.value, pagination.value)).data.data
-  } else {
-    data.value = (await listBanHistory(pagination.value)).data.data
+  try {
+    if (showSearchForm.value && props.param) {
+      data.value = (await complexBanHistoryQuery(props.param, pagination.value)).data.data
+    } else {
+      data.value = (await listBanHistory(pagination.value)).data.data
+    }
+    results.value = data.value.results
+  } catch (e) {
+    ElNotification.error({
+      title: t('global.messages.error.fetchData'),
+      message: String(e)
+    })
   }
-  results.value = data.value.results
   loading.value = false
 }
 
@@ -353,10 +358,13 @@ const copyContent = async (content: string) => {
   }
 }
 
-// 监听complexBanQuery的变化，当complexBanQuery变化时，重新获取数据
-watch(complexBanQuery, () => {
-  fetchData()
-})
+// 监听props.param的变化，当props.param变化时，重新获取数据
+watch(
+  () => props.param,
+  () => {
+    fetchData()
+  }
+)
 
 defineExpose({
   fetchData

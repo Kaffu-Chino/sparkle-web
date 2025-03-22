@@ -78,9 +78,7 @@ const emit = defineEmits(['toggle:search', 'error'])
 const loading = defineModel<Boolean>('loading', {
   default: false
 })
-const complexClientQuery = defineModel<IComplexClientDiscoveryQueryRequest | null>('param', {
-  default: null
-})
+const props = defineProps<{ param: IComplexClientDiscoveryQueryRequest | null }>()
 
 const toggleSearch = () => {
   showSearchForm.value = !showSearchForm.value
@@ -89,14 +87,19 @@ const toggleSearch = () => {
 
 const fetchData = async () => {
   loading.value = true
-  if (showSearchForm.value && complexClientQuery.value) {
-    data.value = (
-      await complexClientDiscoveryQuery(complexClientQuery.value, pagination.value)
-    ).data.data
-  } else {
-    data.value = (await listClientDiscovery(pagination.value)).data.data
+  try {
+    if (showSearchForm.value && props.param) {
+      data.value = (await complexClientDiscoveryQuery(props.param, pagination.value)).data.data
+    } else {
+      data.value = (await listClientDiscovery(pagination.value)).data.data
+    }
+    results.value = data.value.results
+  } catch (e) {
+    ElNotification.error({
+      title: t('global.messages.error.fetchData'),
+      message: String(e)
+    })
   }
-  results.value = data.value.results
   loading.value = false
 }
 
@@ -108,10 +111,13 @@ const handleCurrentChange = () => {
   fetchData()
 }
 
-// 监听complexClientQuery的变化，当complexClientQuery变化时，重新获取数据
-watch(complexClientQuery, () => {
-  fetchData()
-})
+// 监听props.param的变化，当props.param变化时，重新获取数据
+watch(
+  () => props.param,
+  () => {
+    fetchData()
+  }
+)
 
 defineExpose({
   fetchData

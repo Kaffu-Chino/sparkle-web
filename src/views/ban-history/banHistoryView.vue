@@ -9,7 +9,7 @@
       <banHistoryTable
         ref="banHistoryTableRef"
         v-model:loading="loading"
-        v-model:param="complexBanHistoryQueryReq"
+        :param="complexBanHistoryQueryReq"
         @toggle:search="toggleSearchForm"
       ></banHistoryTable>
     </el-col>
@@ -32,7 +32,8 @@ const toggleSearchForm = (show: boolean) => {
   showSearchForm.value = show
 }
 
-const handleSubmitSearch = async (param: IComplexBanHistoryQueryRequest) => {
-  complexBanHistoryQueryReq.value = param
+const handleSubmitSearch = (param: IComplexBanHistoryQueryRequest) => {
+  // 确保引用发生变化，触发banHistoryTable组件中watch函数
+  complexBanHistoryQueryReq.value = { ...param }
 }
 </script>
