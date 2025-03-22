@@ -189,7 +189,7 @@
           >
             <template #default="scope">
               <el-tag v-if="scope.row.torrent.privateTorrent" type="warning">{{
-                t('snapshotView.snapshotTable.columns.torrentInfo.columns.types.bt')
+                t('snapshotView.snapshotTable.columns.torrentInfo.columns.types.pt')
               }}</el-tag>
               <el-tag v-else type="info">{{
                 t('snapshotView.snapshotTable.columns.torrentInfo.columns.types.bt')
@@ -247,6 +247,7 @@ import {
 import clipboardCopy from 'clipboard-copy'
 import { onMounted, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { ElMessage, ElNotification } from 'element-plus'
 import type { ISnapshot } from '~/api/models/snapshot'
 import type { IPagination } from '~/api/models/pagination'
 import type { IPaginationRequest } from '~/api/models/paginationRequest'
@@ -285,12 +286,19 @@ const toggleSearch = () => {
 
 const fetchData = async () => {
   loading.value = true
-  if (showSearchForm.value && props.param) {
-    data.value = (await complexSnapshotQuery(props.param, pagination.value)).data.data
-  } else {
-    data.value = (await listSnapshot(pagination.value)).data.data
+  try {
+    if (showSearchForm.value && props.param) {
+      data.value = (await complexSnapshotQuery(props.param, pagination.value)).data.data
+    } else {
+      data.value = (await listSnapshot(pagination.value)).data.data
+    }
+    results.value = data.value.results
+  } catch (e) {
+    ElNotification.error({
+      title: t('global.messages.error.fetchData'),
+      message: String(e)
+    })
   }
-  results.value = data.value.results
   loading.value = false
 }
 

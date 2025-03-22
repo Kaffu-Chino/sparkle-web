@@ -23,6 +23,7 @@ export default {
 
   'global.messages.copySuccess': 'Copy Success',
   'global.messages.copyError': 'Copy Error',
+  'global.messages.error.fetchData': 'Fetch Data Error',
 
   'global.peerFlags.flags.P': 'μtp',
   'global.peerFlags.flags.d':
