@@ -283,7 +283,7 @@ import {
 import clipboardCopy from 'clipboard-copy'
 import { onMounted, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { ElMessage, ElNotification } from 'element-plus'
+import { ElNotification } from 'element-plus'
 import type { IBanHistory } from '~/api/models/banHistory'
 import type { IPagination } from '~/api/models/pagination'
 import type { IPaginationRequest } from '~/api/models/paginationRequest'
