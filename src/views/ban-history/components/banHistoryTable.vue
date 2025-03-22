@@ -198,7 +198,7 @@
           >
             <template #default="scope">
               <el-tag v-if="scope.row.torrent.privateTorrent" type="warning">{{
-                t('banHistoryView.banHistoryTable.columns.torrentInfo.columns.types.bt')
+                t('banHistoryView.banHistoryTable.columns.torrentInfo.columns.types.pt')
               }}</el-tag>
               <el-tag v-else type="info">{{
                 t('banHistoryView.banHistoryTable.columns.torrentInfo.columns.types.bt')
@@ -283,6 +283,7 @@ import {
 import clipboardCopy from 'clipboard-copy'
 import { onMounted, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { ElMessage, ElNotification } from 'element-plus'
 import type { IBanHistory } from '~/api/models/banHistory'
 import type { IPagination } from '~/api/models/pagination'
 import type { IPaginationRequest } from '~/api/models/paginationRequest'
@@ -343,10 +344,10 @@ const handleCurrentChange = () => {
 const copyContent = async (content: string) => {
   try {
     await clipboardCopy(content)
-    ElMessage.success(t('global.messages.copySuccess'))
+    ElMessage.success(t('global.messages.success.copy'))
   } catch (e) {
     ElNotification.error({
-      title: t('global.messages.copyError'),
+      title: t('global.messages.error.copy'),
       message: String(e)
     })
   }

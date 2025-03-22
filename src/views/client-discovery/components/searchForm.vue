@@ -231,7 +231,7 @@
             <!--tooltip 关联组件为 input 时 trigger="focus" 不行([issues/18220])，暂时先用受控模式 -->
             <el-tooltip placement="right" :visible="showSortByTooltip">
               <template #content>
-                {{ t('clientDiscoveryView.searchForm.formItems.sortBy.toooltips.inputTip') }}
+                {{ t('clientDiscoveryView.searchForm.formItems.sortBy.tooltips.inputTip') }}
               </template>
               <el-input-tag
                 @focus="showSortByTooltip = true"

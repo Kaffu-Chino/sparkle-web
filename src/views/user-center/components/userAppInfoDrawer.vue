@@ -73,7 +73,7 @@ const exportToCSVEvent = () => {
       // 模拟点击下载链接
       downloadLink.click()
     } else {
-      emit('error:exportCsv', t('userCenterView.userAppInfoDrawer.exportCSV.error'))
+      emit('error:exportCsv', t('userCenterView.userAppInfoDrawer.messages.error.exportCsv'))
     }
   }
 }

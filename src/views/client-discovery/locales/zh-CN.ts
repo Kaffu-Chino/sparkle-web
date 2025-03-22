@@ -28,7 +28,7 @@ export default {
   'clientDiscoveryView.searchForm.formItems.peerClientName': 'Peer 客户端名称',
   'clientDiscoveryView.searchForm.sections.searchSettings': '搜索设置',
   'clientDiscoveryView.searchForm.formItems.sortBy': '排序方式',
-  'clientDiscoveryView.searchForm.formItems.sortBy.toooltips.inputTip': '输入一个后请按 Enter 键',
+  'clientDiscoveryView.searchForm.formItems.sortBy.tooltips.inputTip': '输入一个后请按 Enter 键',
   'clientDiscoveryView.searchForm.formItems.sortOrder': '排序顺序',
   'clientDiscoveryView.searchForm.formItems.orConnector': '使用 OR 条件连接查询项',
   'clientDiscoveryView.searchForm.formItems.compareMethodSelect.placeholder': '匹配方式',

@@ -6,7 +6,7 @@ import type { IPaginationRequest } from './models/paginationRequest'
 import type { IComplexBanHistoryQueryRequest } from './models/banHistoryRequest'
 
 /**
- * 查询客户端发现记录
+ * 查询封禁历史
  * @param paginationReq 分页请求
  * @returns
  **/
@@ -15,7 +15,7 @@ export async function listBanHistory(paginationReq: IPaginationRequest) {
 }
 
 /**
- * 复杂查询客户端发现记录
+ * 复杂查询封禁历史
  * @param complexBanHistoryQueryReq 复杂封禁历史查询请求
  * @param paginationRequest 分页请求
  * @returns

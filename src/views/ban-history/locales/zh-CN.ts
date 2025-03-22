@@ -34,7 +34,7 @@ export default {
   'banHistoryView.searchForm.formItems.btnBan.options.no': '否',
   'banHistoryView.searchForm.sections.searchSettings': '查询设置',
   'banHistoryView.searchForm.formItems.sortBy': '排序字段',
-  'banHistoryView.searchForm.formItems.sortBy.toooltips.inputTip': '输入一个后请按 Enter 键',
+  'banHistoryView.searchForm.formItems.sortBy.tooltips.inputTip': '输入一个后请按 Enter 键',
   'banHistoryView.searchForm.formItems.sortOrder': '排序方式',
   'banHistoryView.searchForm.formItems.orConnector': '使用 OR 条件连接查询项',
   'banHistoryView.searchForm.formItems.compareMethodSelect.placeholder': '匹配方式',
@@ -49,7 +49,7 @@ export default {
   'banHistoryView.banHistoryTable.columns.torrentInfo': '种子信息',
   'banHistoryView.banHistoryTable.columns.torrentInfo.columns.types': '种类',
   'banHistoryView.banHistoryTable.columns.torrentInfo.columns.types.bt': '普通种',
-  'banHistoryView.banHistoryTable.columns.torrentIdentifier.types.pt': '私有种',
+  'banHistoryView.banHistoryTable.columns.torrentInfo.columns.types.pt': '私有种',
   'banHistoryView.banHistoryTable.columns.torrentInfo.columns.identifier': '标识符',
   'banHistoryView.banHistoryTable.columns.torrentInfo.columns.torrentSize': '大小',
   'banHistoryView.banHistoryTable.columns.banInfo': '封禁信息',
@@ -60,5 +60,5 @@ export default {
     'peer 标志位',
   'banHistoryView.banHistoryTable.columns.expand.moreInfoDescriptions.items.banModule': '封禁模块',
   'banHistoryView.banHistoryTable.columns.expand.moreInfoDescriptions.items.submitterAppId':
-    '提交者App ID'
+    '提交者 App ID'
 }

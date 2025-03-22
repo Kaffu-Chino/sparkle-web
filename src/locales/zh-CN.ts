@@ -21,8 +21,8 @@ export default {
   'global.form.submit': '提交',
   'global.form.empty': '清空',
 
-  'global.messages.copySuccess': '复制成功',
-  'global.messages.copyError': '复制失败',
+  'global.messages.success.copy': '复制成功',
+  'global.messages.error.copy': '复制失败',
   'global.messages.error.fetchData': '获取数据失败',
 
   'global.peerFlags.flags.P': 'μtp',

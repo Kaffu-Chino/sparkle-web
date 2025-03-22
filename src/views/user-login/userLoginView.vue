@@ -23,6 +23,7 @@
 import { useI18n } from 'vue-i18n'
 import { useLocalePath } from 'vue-i18n-routing'
 import { useRouter } from 'vue-router'
+import { ElNotification } from 'element-plus'
 import { useUserStore } from '~/stores/userStore'
 const { t } = useI18n()
 const userStore = useUserStore()
@@ -33,7 +34,7 @@ const userLoginWithGithub = () => {
   if (!userStore.isLoggedIn()) {
     window.location.href = '/auth/oauth2/github/login'
   } else {
-    ElNotification.info(t('loginView.alreadyLogged.info'))
+    ElNotification.info(t('loginView.messages.info.alreadyLogged'))
     router.replace(localePath('/user/center'))
   }
 }

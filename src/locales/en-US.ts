@@ -21,8 +21,8 @@ export default {
   'global.form.submit': 'Submit',
   'global.form.empty': 'Empty',
 
-  'global.messages.copySuccess': 'Copy Success',
-  'global.messages.copyError': 'Copy Error',
+  'global.messages.success.copy': 'Copy Success',
+  'global.messages.error.copy': 'Copy Error',
   'global.messages.error.fetchData': 'Fetch Data Error',
 
   'global.peerFlags.flags.P': 'μtp',
