@@ -26,11 +26,8 @@
     >
       {{ t('header.router.banHistory') }}
     </el-menu-item>
-    <el-menu-item
-      :index="localePath('/submissionRecords')"
-      @click="router.push(localePath('/submissionRecords'))"
-    >
-      {{ t('header.router.submissionRecords') }}
+    <el-menu-item :index="localePath('/snapshot')" @click="router.push(localePath('/snapshot'))">
+      {{ t('header.router.snapshot') }}
     </el-menu-item>
     <el-menu-item
       :index="localePath('/clientDiscovery')"

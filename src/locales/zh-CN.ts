@@ -4,6 +4,7 @@ import userCenterViewLocales from '~/views/user-center/locales/zh-CN'
 import userLoginViewLocales from '~/views/user-login/locales/zh-CN'
 import banHistoryViewLocales from '~/views/ban-history/locales/zh-CN'
 import clientDiscoveryViewLocales from '~/views/client-discovery/locales/zh-CN'
+import snapshotViewLocales from '~/views/snapshot/locales/zh-CN'
 
 export default {
   'global.create': '创建',
@@ -61,7 +62,7 @@ export default {
 
   'header.router.home': '首页',
   'header.router.banHistory': '封禁历史',
-  'header.router.submissionRecords': '提交记录',
+  'header.router.snapshot': '快照记录',
   'header.router.clientDiscovery': '客户端发现',
   'header.router.tracker': 'Tracker',
   'header.router.user': '用户',
@@ -74,5 +75,6 @@ export default {
   ...userCenterViewLocales,
   ...userLoginViewLocales,
   ...banHistoryViewLocales,
-  ...clientDiscoveryViewLocales
+  ...clientDiscoveryViewLocales,
+  ...snapshotViewLocales
 }
