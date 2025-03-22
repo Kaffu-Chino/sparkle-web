@@ -29,7 +29,7 @@ export default {
   'clientDiscoveryView.searchForm.formItems.peerClientName': 'Peer Client Name',
   'clientDiscoveryView.searchForm.sections.searchSettings': 'Search Settings',
   'clientDiscoveryView.searchForm.formItems.sortBy': 'Sort By',
-  'clientDiscoveryView.searchForm.formItems.sortBy.toooltips.inputTip':
+  'clientDiscoveryView.searchForm.formItems.sortBy.tooltips.inputTip':
     'Please click the Enter key after input one',
   'clientDiscoveryView.searchForm.formItems.sortOrder': 'Sort Order',
   'clientDiscoveryView.searchForm.formItems.orConnector': 'Use "OR" Connector',

@@ -34,7 +34,7 @@ export default {
   'banHistoryView.searchForm.formItems.btnBan.options.no': 'No',
   'banHistoryView.searchForm.sections.searchSettings': 'Search Settings',
   'banHistoryView.searchForm.formItems.sortBy': 'Sort By',
-  'banHistoryView.searchForm.formItems.sortBy.toooltips.inputTip':
+  'banHistoryView.searchForm.formItems.sortBy.tooltips.inputTip':
     'Please click the Enter key after input one',
   'banHistoryView.searchForm.formItems.sortOrder': 'Sort Order',
   'banHistoryView.searchForm.formItems.orConnector': 'Use "OR" Connector',
@@ -51,9 +51,9 @@ export default {
   'banHistoryView.banHistoryTable.columns.torrentInfo': 'Torrent Info',
   'banHistoryView.banHistoryTable.columns.torrentInfo.columns.types': 'Type',
   'banHistoryView.banHistoryTable.columns.torrentInfo.columns.types.bt': 'Common',
-  'banHistoryView.banHistoryTable.columns.torrentIdentifier.types.pt': 'Private',
+  'banHistoryView.banHistoryTable.columns.torrentInfo.columns.types.pt': 'Private',
   'banHistoryView.banHistoryTable.columns.torrentInfo.columns.identifier': 'Identifier Hash',
-  'banHistoryView.banHistoryTable.columns.torrentInfo.columns.torrentSize': 'Szie',
+  'banHistoryView.banHistoryTable.columns.torrentInfo.columns.torrentSize': 'Size',
   'banHistoryView.banHistoryTable.columns.banInfo': 'Ban Info',
   'banHistoryView.banHistoryTable.columns.banInfo.columns.btnBan': 'BTN Ban',
   'banHistoryView.banHistoryTable.columns.banInfo.columns.banReason': 'Ban Reason',

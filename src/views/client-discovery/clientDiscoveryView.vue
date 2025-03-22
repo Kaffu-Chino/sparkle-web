@@ -9,7 +9,7 @@
       <clientDiscoveryList
         ref="clientDiscoveryListRef"
         v-model:loading="loading"
-        v-model:param="complexClientDiscoveryQueryReq"
+        :param="complexClientDiscoveryQueryReq"
         @toggle:search="toggleSearchForm"
       ></clientDiscoveryList>
     </el-col>
@@ -32,7 +32,8 @@ const toggleSearchForm = (show: boolean) => {
   showSearchForm.value = show
 }
 
-const handleSubmitSearch = async (param: IComplexClientDiscoveryQueryRequest) => {
-  complexClientDiscoveryQueryReq.value = param
+const handleSubmitSearch = (param: IComplexClientDiscoveryQueryRequest) => {
+  // 确保引用发生变化，触发clientDiscoveryList组件中watch函数
+  complexClientDiscoveryQueryReq.value = { ...param }
 }
 </script>

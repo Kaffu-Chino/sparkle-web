@@ -18,7 +18,7 @@
         <el-col :xs="24" :sm="20" :md="16" :lg="12" :xl="8">
           <el-form-item
             :label="t('clientDiscoveryView.searchForm.formItems.foundAtTimeRange')"
-            prop="dateTimeRange"
+            prop="foundAtTimeRange"
           >
             <!-- shortcuts不能放script里多国语言切换会失效 -->
             <el-date-picker
@@ -95,7 +95,7 @@
         <el-col :xs="24" :sm="20" :md="16" :lg="12" :xl="8">
           <el-form-item
             :label="t('clientDiscoveryView.searchForm.formItems.lastSeenAtTimeRange')"
-            prop="dateTimeRange"
+            prop="lastSeenAtTimeRange"
           >
             <!-- shortcuts不能放script里多国语言切换会失效 -->
             <el-date-picker
@@ -231,7 +231,7 @@
             <!--tooltip 关联组件为 input 时 trigger="focus" 不行([issues/18220])，暂时先用受控模式 -->
             <el-tooltip placement="right" :visible="showSortByTooltip">
               <template #content>
-                {{ t('clientDiscoveryView.searchForm.formItems.sortBy.toooltips.inputTip') }}
+                {{ t('clientDiscoveryView.searchForm.formItems.sortBy.tooltips.inputTip') }}
               </template>
               <el-input-tag
                 @focus="showSortByTooltip = true"

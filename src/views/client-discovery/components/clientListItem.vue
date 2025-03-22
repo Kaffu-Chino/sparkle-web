@@ -99,7 +99,7 @@
 
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n'
-import { dayjs } from 'element-plus'
+import { dayjs, ElMessage, ElNotification } from 'element-plus'
 import { CopyDocument as ElCopyDocument } from '@element-plus/icons-vue'
 import { computed } from 'vue'
 import { useWindowSize } from '@vueuse/core'
@@ -123,10 +123,10 @@ const props = defineProps<{
 const copyContent = async (content: string) => {
   try {
     await clipboardCopy(content)
-    ElMessage.success(t('global.messages.copySuccess'))
+    ElMessage.success(t('global.messages.success.copy'))
   } catch (e) {
     ElNotification.error({
-      title: t('global.messages.copyError'),
+      title: t('global.messages.error.copy'),
       message: String(e)
     })
   }

@@ -96,7 +96,7 @@
 </template>
 
 <script lang="ts" setup>
-import { dayjs } from 'element-plus'
+import { dayjs, ElMessage, ElNotification } from 'element-plus'
 import {
   Refresh as ElRefresh,
   Edit as ElEdit,
@@ -106,7 +106,6 @@ import {
   InfoFilled as ElInfoFilled
 } from '@element-plus/icons-vue'
 import { onMounted, ref } from 'vue'
-
 import { useI18n } from 'vue-i18n'
 import type { IUserApplication } from '~/api/models/userApplication'
 import {
@@ -133,7 +132,9 @@ const confirmDeleteEvent = async (row: IUserApplication) => {
   if (results.value) {
     let resp = (await deleteUserAppByAppId(row.appId)).data
     if (resp.success) {
-      ElMessage.success(t('userCenterView.userAppsTable.column.delete.success'))
+      ElMessage.success(t('userCenterView.userAppsTable.messages.success.delete'))
+    } else {
+      ElNotification.error(t('userCenterView.userAppsTable.messages.error.delete'))
     }
   }
   fetchData()
@@ -151,6 +152,8 @@ const confirmResetUserAppEvent = async (row: IUserApplication) => {
   let resp = (await resetUserAppSecretByAppId(row.appId)).data
   if (resp.success) {
     userAppInfoDrawerRef.value?.openDrawer(false, resp.data)
+  } else {
+    ElNotification.error(t('userCenterView.userAppsTable.messages.error.resetAppSecret'))
   }
 }
 
@@ -164,22 +167,31 @@ const handleCreate = (newApp: IUserApplication) => {
 }
 
 const handleUpdate = (editedApp: IUserApplication) => {
-  ElMessage.success(t('userCenterView.userAppsTable.column.edit.success'))
+  ElMessage.success(t('userCenterView.userAppsTable.messages.success.edit'))
   if (results.value) {
     const index = results.value.findIndex((app) => app.appId === editedApp.appId)
     if (index !== -1) {
       results.value[index] = editedApp
+    } else {
+      ElNotification.error(t('userCenterView.userAppsTable.messages.error.editedAppNotFound'))
     }
   }
   editableUserAppDrawerRef.value?.closeDrawer()
 }
 
-const handleError = () => {
+const handleError = (message: string) => {
   editableUserAppDrawerRef.value?.closeDrawer()
+  ElNotification.error({
+    title: t('userCenterView.userAppsTable.messages.error'),
+    message: message
+  })
 }
 
 const handleInternalComponentsError = (message: string) => {
-  ElNotification.error(message)
+  ElNotification.error({
+    title: t('userCenterView.userAppsTable.messages.error.internalComponents'),
+    message: message
+  })
 }
 
 onMounted(() => {

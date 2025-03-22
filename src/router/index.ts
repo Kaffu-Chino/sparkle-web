@@ -117,6 +117,9 @@ const i18nRouter = createI18nRouter(i18n, {
 i18nRouter.beforeEach((to: RouteLocationNormalized) => {
   const langStore = useLanguageStore()
   const userStore = useUserStore()
+  if (to.path === '/') {
+    to.path = ''
+  }
   const pathLocale = to.path.split('/')[1]
   if (!pathLocale || !switchableLocales.some((item) => item.code === pathLocale)) {
     return `/${langStore.language}${to.path}`

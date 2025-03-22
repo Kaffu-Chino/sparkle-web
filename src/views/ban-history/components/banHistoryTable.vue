@@ -198,7 +198,7 @@
           >
             <template #default="scope">
               <el-tag v-if="scope.row.torrent.privateTorrent" type="warning">{{
-                t('banHistoryView.banHistoryTable.columns.torrentInfo.columns.types.bt')
+                t('banHistoryView.banHistoryTable.columns.torrentInfo.columns.types.pt')
               }}</el-tag>
               <el-tag v-else type="info">{{
                 t('banHistoryView.banHistoryTable.columns.torrentInfo.columns.types.bt')
@@ -283,6 +283,7 @@ import {
 import clipboardCopy from 'clipboard-copy'
 import { onMounted, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { ElMessage, ElNotification } from 'element-plus'
 import type { IBanHistory } from '~/api/models/banHistory'
 import type { IPagination } from '~/api/models/pagination'
 import type { IPaginationRequest } from '~/api/models/paginationRequest'
@@ -312,9 +313,7 @@ const emit = defineEmits(['toggle:search', 'error'])
 const loading = defineModel<Boolean>('loading', {
   default: false
 })
-const complexBanQuery = defineModel<IComplexBanHistoryQueryRequest | null>('param', {
-  default: null
-})
+const props = defineProps<{ param: IComplexBanHistoryQueryRequest | null }>()
 
 const toggleSearch = () => {
   showSearchForm.value = !showSearchForm.value
@@ -323,12 +322,19 @@ const toggleSearch = () => {
 
 const fetchData = async () => {
   loading.value = true
-  if (showSearchForm.value && complexBanQuery.value) {
-    data.value = (await complexBanHistoryQuery(complexBanQuery.value, pagination.value)).data.data
-  } else {
-    data.value = (await listBanHistory(pagination.value)).data.data
+  try {
+    if (showSearchForm.value && props.param) {
+      data.value = (await complexBanHistoryQuery(props.param, pagination.value)).data.data
+    } else {
+      data.value = (await listBanHistory(pagination.value)).data.data
+    }
+    results.value = data.value.results
+  } catch (e) {
+    ElNotification.error({
+      title: t('global.messages.error.fetchData'),
+      message: String(e)
+    })
   }
-  results.value = data.value.results
   loading.value = false
 }
 
@@ -343,19 +349,22 @@ const handleCurrentChange = () => {
 const copyContent = async (content: string) => {
   try {
     await clipboardCopy(content)
-    ElMessage.success(t('global.messages.copySuccess'))
+    ElMessage.success(t('global.messages.success.copy'))
   } catch (e) {
     ElNotification.error({
-      title: t('global.messages.copyError'),
+      title: t('global.messages.error.copy'),
       message: String(e)
     })
   }
 }
 
-// 监听complexBanQuery的变化，当complexBanQuery变化时，重新获取数据
-watch(complexBanQuery, () => {
-  fetchData()
-})
+// 监听props.param的变化，当props.param变化时，重新获取数据
+watch(
+  () => props.param,
+  () => {
+    fetchData()
+  }
+)
 
 defineExpose({
   fetchData
