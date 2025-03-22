@@ -23,6 +23,7 @@ export default {
 
   'global.messages.copySuccess': '复制成功',
   'global.messages.copyError': '复制失败',
+  'global.messages.error.fetchData': '获取数据失败',
 
   'global.peerFlags.flags.P': 'μtp',
   'global.peerFlags.flags.d': '您：期待下载╱他：拒绝上传',

@@ -28,7 +28,7 @@ export default {
   'snapshotView.searchForm.formItems.downloaderProgress': 'Downloader Progress',
   'snapshotView.searchForm.sections.searchSettings': 'Search Settings',
   'snapshotView.searchForm.formItems.sortBy': 'Sort By',
-  'snapshotView.searchForm.formItems.sortBy.toooltips.inputTip':
+  'snapshotView.searchForm.formItems.sortBy.tooltips.inputTip':
     'Please click the Enter key after input one',
   'snapshotView.searchForm.formItems.sortOrder': 'Sort Order',
   'snapshotView.searchForm.formItems.orConnector': 'Use "OR" Connector',
@@ -45,7 +45,7 @@ export default {
   'snapshotView.snapshotTable.columns.torrentInfo': 'Torrent Info',
   'snapshotView.snapshotTable.columns.torrentInfo.columns.types': 'Type',
   'snapshotView.snapshotTable.columns.torrentInfo.columns.types.bt': 'Common',
-  'snapshotView.snapshotTable.columns.torrentIdentifier.types.pt': 'Private',
+  'snapshotView.snapshotTable.columns.torrentInfo.columns.types.pt': 'Private',
   'snapshotView.snapshotTable.columns.torrentInfo.columns.identifier': 'Identifier Hash',
   'snapshotView.snapshotTable.columns.torrentInfo.columns.torrentSize': 'Size',
   'snapshotView.snapshotTable.columns.expand.moreInfoDescriptions.title':

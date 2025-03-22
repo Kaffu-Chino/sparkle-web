@@ -507,7 +507,7 @@
             <!--tooltip 关联组件为 input 时 trigger="focus" 不行([issues/18220])，暂时先用受控模式 -->
             <el-tooltip placement="right" :visible="showSortByTooltip">
               <template #content>
-                {{ t('snapshotView.searchForm.formItems.sortBy.toooltips.inputTip') }}
+                {{ t('snapshotView.searchForm.formItems.sortBy.tooltips.inputTip') }}
               </template>
               <el-input-tag
                 @focus="showSortByTooltip = true"
@@ -556,8 +556,8 @@ import { dayjs, type FormInstance, type FormRules } from 'element-plus'
 import { StringCompareMethod, NumberCompareMethod } from '~/enums/compareMethod'
 import { formatFileSize, formatSpeedSize } from '~/utils/file'
 import type {
-  IComplexsnapshotQueryForm,
-  IComplexsnapshotQueryRequest
+  IComplexSnapshotQueryForm,
+  IComplexSnapshotQueryRequest
 } from '~/api/models/snapshotRequest'
 
 const { t } = useI18n()
@@ -570,7 +570,7 @@ const showFromPeerTrafficSpeedTooltip = ref<boolean>(false)
 const showToPeerTrafficSpeedTooltip = ref<boolean>(false)
 const showSortByTooltip = ref<boolean>(false)
 
-const snapshotForm = reactive<IComplexsnapshotQueryForm>({} as IComplexsnapshotQueryForm)
+const snapshotForm = reactive<IComplexSnapshotQueryForm>({} as IComplexSnapshotQueryForm)
 
 const validatePeerIdItem = (rule: any, value: any, callback: any) => {
   if (
@@ -750,7 +750,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
   await formEl.validate((valid) => {
     if (valid) {
       loading.value = true
-      emit('submit', snapshotForm as IComplexsnapshotQueryRequest)
+      emit('submit', snapshotForm as IComplexSnapshotQueryRequest)
     }
   })
 }
